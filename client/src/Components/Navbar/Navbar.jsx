@@ -89,4 +89,4 @@ const Navbar = ({ theme, onThemeSwitch }) => {
   );
 };
 
-export default Navbar;
+export default Navbar
