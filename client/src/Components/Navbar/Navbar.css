@@ -74,6 +74,20 @@
     margin-left: -20px;
     margin-top: -15px;
   }
+  /*.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -90px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color:white;
+}
+    */
 
 .nav-login-cart button{
     width: 120px;
@@ -106,19 +120,7 @@
     background: #f3f3f3;
 }
 
-.nav-cart-count{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: -90px;
-    border-radius: 11px;
-    font-size: 14px;
-    background: red;
-    color:white;
-}
+
 .nav-login-cart .theme-toggle-btn svg {
     width: 24px;
     height: 24px;
@@ -223,6 +225,46 @@
         margin-left: -50px;
         font-size: 12px;
     }
+    .dark .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dark .nav-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .dark .nav-logo p {
+        font-size: 28px;
+    }
+
+    .dark .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dark .nav-login-cart {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .dark .nav-login-cart button {
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .dark .nav-login-cart img {
+        width: 80px;
+        margin-left: 0;
+    }
+
+    .dark .nav-cart-count {
+        margin-top: -20px;
+        margin-left: -50px;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -245,6 +287,29 @@
     }
 
     .nav-cart-count {
+        margin-top: -15px;
+        margin-left: -35px;
+        font-size: 10px;
+    }
+    .dark .nav-menu {
+        gap: 15px;
+    }
+
+    .dark .nav-menu li {
+        font-size: 18px;
+    }
+
+    .dark .nav-login-cart button {
+        width: 80px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .dark .nav-login-cart img {
+        width: 60px;
+    }
+
+    .dark .nav-cart-count {
         margin-top: -15px;
         margin-left: -35px;
         font-size: 10px;
