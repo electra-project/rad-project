@@ -1,54 +1,117 @@
-.hero{
-    height: 100vh;
-    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%);
-    display: flex;
+.hero {
+  height: 100vh;
+  /* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
+  background: linear-gradient(180deg, #ff3434a1, #3d3d3d07 40%);
+  display: flex;
 }
-.hero-left{
-    flex:1;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:20px;
-    padding-left: 180px;
-    line-height: 1.1;
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+  line-height: 1.1;
 }
-.hero-left h2{
-    color: #090909;
-    font-size: 26px;
-    font-weight: 600px;
-}
-
-.hero-left p{
-    color: #171717;
-    font-size: 100px;
-    font-weight: 700;
-}
-.hero-hand-icon{
-    display: flex;
-    align-items: center;
-    gap:20px;
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600px;
 }
 
-.hero-hand-icon img{
-    width:150px;
+.hero-left p {
+  color: #171717;
+  font-size: 100px;
+  font-weight: 700;
 }
-.hero-latest-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
-    border-radius: 75px;
-    margin-top:30px;
-    background: #ff4141;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.hero-right{
+
+.hero-hand-icon img {
+  width: 150px;
+}
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #ff4141;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+/* .hero-right{
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Keep the flex properties here to ensure proper alignment */
+}
+
+.hero-right img {
+  transform: scale(1.4); /* Increase the scale factor to make it bigger */
+  max-width: 100%; /* Ensures it doesn't exceed the container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /*not sure if this is the best approach*/
+  left: -100px;
+}
+
+/* DARK MODE FOR HERO */
+
+.dark .hero-left h2 {
+  color: #eeeeee;
+  font-size: 26px;
+  font-weight: 600px;
+}
+
+.dark .hero-left p {
+  color: #f5f5f5;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.dark .hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #f8f8f8;
+  color: rgb(252, 86, 86);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.dark .hero {
+  height: 100vh;
+  background: linear-gradient(180deg, #ff3535, #3d3d3d 60%);
+  display: flex;
+}
+
+.dark .hero-right img {
+  transform: scale(1.4); /* Increase the scale factor to make it bigger */
+  max-width: 100%; /* Ensures it doesn't exceed the container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /* This is fine if you want to control its positioning */
+  left: -100px;
+  filter: drop-shadow(
+    0px 0px 30px rgba(255, 255, 255, 0.6)
+  ); /* Adjusted for outer glow */
 }
