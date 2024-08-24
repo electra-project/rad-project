@@ -1,23 +1,31 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import { ShopContext } from "../../Context/ShopContext";
 // import Cart from "../Assets/cart.png";
+import nav_dropdown from "../Assets/nav_dropdown.png";
 
 const Navbar = ({ theme, onThemeSwitch }) => {
   const [menu, setMenu] = useState("shop");
-  const {getTotalCartItems} = useContext(ShopContext)
+  const { getTotalCartItems } = useContext(ShopContext);
+  const menuRef = useRef();
+
+  // const dropdown_toggle = (e) => {
+  //   menuRef.current.classList.toggle("nav-menu-visible");
+  //   e.target.classList.toggle("open");
+  // };
+
   return (
     <div className="navbar">
       <Logo theme={theme} />
+
       <ul className="nav-menu">
         <li
           onClick={() => {
             setMenu("shop");
           }}
         >
-          {" "}
           <Link to="/">Shop</Link> {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
@@ -91,4 +99,4 @@ const Navbar = ({ theme, onThemeSwitch }) => {
   );
 };
 
-export default Navbar
+export default Navbar;
