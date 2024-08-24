@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
+import { ShopContext } from "../../Context/ShopContext";
 // import Cart from "../Assets/cart.png";
 
 const Navbar = ({ theme, onThemeSwitch }) => {
   const [menu, setMenu] = useState("shop");
+  const {getTotalCartItems} = useContext(ShopContext)
   return (
     <div className="navbar">
       <Logo theme={theme} />
@@ -83,10 +85,10 @@ const Navbar = ({ theme, onThemeSwitch }) => {
             />
           </svg>
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default Navbar
