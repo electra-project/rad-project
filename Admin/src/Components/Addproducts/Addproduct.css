@@ -30,9 +30,16 @@
     gap: 40px;
 }
 
+.category-image{
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Add gap between category and image */
+    align-items: center; /* Align items vertically in the center */
+}
+
 .add-product-selector{
     padding: 10px;
-    width: 100px;
+    width: 120px; /* Adjust width as needed */
     height: 50px;
     font-size: 14px;
     color: #7b7b7b;
@@ -48,8 +55,13 @@
     margin: 10px 0px;
 }
 
-.addproduct-btn{
+.addproduct-btn-container{
     margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.addproduct-btn{
     width: 160px;
     height: 50px;
     border-radius: 6px;
@@ -66,5 +78,14 @@
         width: auto;
         padding: 30px;
         margin: 20px;
+    }
+
+    .category-image{
+        flex-direction: column; /* Stack vertically on smaller screens */
+        gap: 20px; /* Adjust gap for better spacing */
+    }
+
+    .addproduct-btn-container{
+        justify-content: center; /* Center button on smaller screens */
     }
 }
