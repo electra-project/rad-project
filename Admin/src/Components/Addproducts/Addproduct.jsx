@@ -82,8 +82,8 @@ const Addproduct = () => {
             <img src={image?URL.createObjectURL(image) :upload_area} alt="image input area" className="addproduct-thumnail-img"/>
         </label>
         <input onChange={imageHandler} type="file" name='image' id="file-input" hidden/>
+        </div>
         <button onClick={()=>{Add_Product()} } className="addproduct-btn">Add product</button>
-      </div>
     </div>
   )
 }
