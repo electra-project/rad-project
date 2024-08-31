@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  @apply w-full border my-2 py-2 px-3 rounded-2xl;
+}
+
+button {
+  @apply bg-alert;
+}
+
+button.primary {
+  background-color: #ff1e00;
+  @apply bg-primary p-2 w-full text-white rounded-xl;
+}
+
+button.alert {
+  background-color: 59ce8f;
+  @apply bg-alert p-2 w-full text-white rounded-xl;
+}

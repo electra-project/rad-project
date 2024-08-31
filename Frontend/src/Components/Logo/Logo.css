@@ -1,0 +1,27 @@
+/* LIGHT MODE PART */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: var();
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* DARK MODE PART */
+
+.dark .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dark .nav-logo p {
+  color: var(--light-color);
+  font-size: 24px;
+  font-weight: 600;
+}
