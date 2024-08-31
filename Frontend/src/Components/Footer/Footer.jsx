@@ -1,43 +1,87 @@
-import React from 'react'
-import './Footer.css'
-import Logo from '../Assets/logo.png'
-import instagram from '../Assets/instagram_icon.png'
-import pintester from '../Assets/pintester_icon.png'
-import whatsapp from '../Assets/whatsapp_icon.png'
+import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-logo">
-        <img src={Logo} alt="logo" />
-        <p> Electra </p>
-      </div>
-      <ul className="footer-links">
-        <li> Company</li>
-        <li>Products</li>
-        <li>Offices</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li> FAQ</li>
-        <li> Privacy Policy</li>
-      </ul>
-      <div className="footer-social-icons">
-        <div className="footer-icons-container">
-            <img src={instagram} alt="Instagram" />
-        </div>
-        <div className="footer-icons-container">
-            <img src={pintester} alt="pintester" />
-        </div>
-        <div className="footer-icons-container">
-            <img src={whatsapp} alt="whatsapp" />
-        </div>
-      </div>
-      <div className="footer-copy-right">
-        <hr />
-            <p> Copy right @ 2023 - All Right Reserved</p>
-      </div>
-    </div>
-  )
-}
+    <footer className="footer">
+      <div className="container">
+        <section className="social-icons">
+          <a href="#!" className="social-icon"><i className="fab fa-facebook-f"></i></a>
+          <a href="#!" className="social-icon"><i className="fab fa-twitter"></i></a>
+          <a href="#!" className="social-icon"><i className="fab fa-google"></i></a>
+          <a href="#!" className="social-icon"><i className="fab fa-instagram"></i></a>
+          <a href="#!" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#!" className="social-icon"><i className="fab fa-github"></i></a>
+        </section>
 
-export default Footer
+        <section className="news">
+          <form action="">
+            <div className="row">
+              <div className="col">
+                <p><strong>Sign up for our newsletter</strong></p>
+              </div>
+              <div className="col">
+                <input type="email" placeholder="Email address" className="email-input" />
+              </div>
+              <div className="col">
+                <button type="submit" className="btn">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section className="description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
+            voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam
+            sequi voluptate quas.</p>
+        </section>
+
+        <section className="links">
+          <div className="link-column">
+            <h5 className="link-title">Links</h5>
+            <ul>
+              <li><a href="#!">Link 1</a></li>
+              <li><a href="#!">Link 2</a></li>
+              <li><a href="#!">Link 3</a></li>
+              <li><a href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div className="link-column">
+            <h5 className="link-title">Links</h5>
+            <ul>
+              <li><a href="#!">Link 1</a></li>
+              <li><a href="#!">Link 2</a></li>
+              <li><a href="#!">Link 3</a></li>
+              <li><a href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div className="link-column">
+            <h5 className="link-title">Links</h5>
+            <ul>
+              <li><a href="#!">Link 1</a></li>
+              <li><a href="#!">Link 2</a></li>
+              <li><a href="#!">Link 3</a></li>
+              <li><a href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div className="link-column">
+            <h5 className="link-title">Links</h5>
+            <ul>
+              <li><a href="#!">Link 1</a></li>
+              <li><a href="#!">Link 2</a></li>
+              <li><a href="#!">Link 3</a></li>
+              <li><a href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div className="copyright">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

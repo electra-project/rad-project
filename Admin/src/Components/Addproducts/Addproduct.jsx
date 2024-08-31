@@ -75,11 +75,11 @@ const Addproduct = () => {
                     <select value={productDetails.category} onChange={changeHandler} name="category" className="add-product-selector">
                         <option value="women">Women</option>
                         <option value="men">Men</option>
-                        <option value="Kid">Kid</option>
+                        <option value="kid">Kid</option>
                     </select>
                 </div>
                 <div className="addproduct-itemfield image_add">
-                    <label htmlFor="file-input">
+                    <label htmlFor="file-input">  sazsa
                         <img src={image ? URL.createObjectURL(image) : upload_area} alt="image input area" className="addproduct-thumnail-img" />
                     </label>
                     <input onChange={imageHandler} type="file" name='image' id="file-input" hidden />
