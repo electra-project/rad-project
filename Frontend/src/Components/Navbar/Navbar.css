@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 
 .nav-cart-count {
@@ -72,6 +73,10 @@
   position: relative;
   margin-left: -20px;
   margin-top: -15px;
+  position: absolute; /* Changed to absolute for better positioning */
+  right: -10px; /* Adjusted positioning relative to the cart icon */
+  top: 10px; /* Adjusted positioning relative to the cart icon */
+  z-index: 1;
 }
 
 .nav-login-cart button {

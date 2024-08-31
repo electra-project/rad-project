@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductDisplay.css';
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -6,7 +7,20 @@ import { ShopContext } from '../../Context/ShopContext';
 
 const ProductDisplay = (props) => {
     const { product } = props;
-    const {addToCart} = useContext(ShopContext);
+    const { addToCart } = useContext(ShopContext);
+    const navigate = useNavigate(); // Hook to programmatically navigate
+
+    const isAuthenticated = () => {
+        return !!localStorage.getItem('auth-token');
+    };
+
+    const handleAddToCart = () => {
+        if (isAuthenticated()) {
+            addToCart(product.id);
+        } else {
+            navigate('/login'); // Redirect to login if not authenticated
+        }
+    };
 
     return (
         <div className="product-display">
@@ -51,11 +65,10 @@ const ProductDisplay = (props) => {
                         <div>XL</div>
                         <div>XXL</div>
                     </div>
-                    </div>
-                    <button onClick = {() => {addToCart(product.id)}}>ADD TO CART</button>
-                    <p className="product-display-right-category"><span>Category:</span> Women, T-Shirt, Crop Top</p>
-                    <p className="product-display-right-category"><span>Tags:</span> Modern, Latest</p>
-                 {/* This closing div was incorrect in your original code */}
+                </div>
+                <button onClick={handleAddToCart}>ADD TO CART</button>
+                <p className="product-display-right-category"><span>Category:</span> Women, T-Shirt, Crop Top</p>
+                <p className="product-display-right-category"><span>Tags:</span> Modern, Latest</p>
             </div>
         </div>
     );
